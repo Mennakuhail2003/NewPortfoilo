@@ -1,0 +1,40 @@
+@import "tailwindcss";
+.hide{
+    display: none;
+}
+/* @media ( width <= 970px) {
+  body{
+    background-color: red !important;
+  }
+  .topBar{
+    flex-wrap: wrap;
+    flex-grow: 1;
+    display: none;
+  }
+  nav{
+    padding: 0 50px;
+  }
+  nav .right ul li a{
+    font-size: 13px;
+  }
+  .rel{
+    top: 3px;
+  }
+  .ConsultingBtn{
+    font-size: 15px;
+    padding: 10px 15px !important;
+    width: 145px;
+    height: 50px;
+  }
+}
+@media (width <= 860px) {
+    body{
+        background-color: blue !important;
+    }
+    .right_{
+        display: none !important; 
+    }
+    #menuToggle{
+        display: block !important;
+    }
+} */

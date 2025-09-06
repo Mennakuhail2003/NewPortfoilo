@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Inter font import -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Test</title>
+  <link rel="stylesheet" href="/src/output.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-white overflow-x-hidden" style="font-family: 'Inter', sans-serif">
+
+
+  <!-- Top Bar -->
+  <div class="bg-[#37393F] py-2 px-4 text-xs text-white w-full hidden md:block">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Left: Address -->
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#40DDB6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <a href="https://maps.google.com/?q=24 Olive Street, Prairie, NY 53590">24 Olive Street, Prairie, NY 53590</a>
+      </div>
+
+      <!-- Center: Email -->
+      <div class="flex items-center gap-2 ">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#40DDB6">
+          <rect width="20" height="14" x="2" y="5" rx="2" />
+          <path d="M22 7.5 12 13 2 7.5" />
+        </svg>
+        <a href="mailto:whitecollar@gmail.com">whitecollar@gmail.com</a>
+      </div>
+
+      <!-- Right: Time & Social -->
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#40DDB6">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          <span>Mon - Fri: 8:00 am - 5:00 pm</span>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://instagram.com" class="hover:text-[#40DDB6]" aria-label="Instagram"><svg
+              xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <circle cx="17.5" cy="6.5" r="1" />
+            </svg></a>
+          <a href="https://Facebook.com" class="hover:text-[#40DDB6]" aria-label="Facebook"><svg
+              xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="https://Twitter.com" class="hover:text-[#40DDB6]" aria-label="Twitter"><svg
+              xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4.36a9.09 9.09 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.5 0-4.52 2.01-4.52 4.5 0 .35.04.7.11 1.03C7.69 5.4 4.07 3.7 1.64 1.15c-.38.65-.6 1.4-.6 2.2 0 1.52.77 2.86 1.94 3.65A4.48 4.48 0 0 1 .96 6v.06c0 2.13 1.52 3.91 3.54 4.31-.37.1-.76.16-1.16.16-.28 0-.55-.03-.81-.08.56 1.74 2.17 3 4.09 3.04A9.05 9.05 0 0 1 0 19.54a12.8 12.8 0 0 0 6.95 2.04c8.34 0 12.9-6.91 12.9-12.9 0-.2 0-.39-.01-.58A9.22 9.22 0 0 0 24 4.59a9.1 9.1 0 0 1-2.6.71A4.48 4.48 0 0 0 23 3z" />
+            </svg></a>
+          <a href="https://Pinterest.com" class="hover:text-[#40DDB6]" aria-label="Pinterest"><svg
+              xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M8.5 13.5c.5 1 1.5 2 3.5 2 2.5 0 4-1.5 4-4s-1.5-4-4-4-4 1.5-4 4c0 1.5.5 2.5 1.5 3" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Navbar -->
+  <nav class="bg-white h-[90px] shadow-md flex items-center justify-between px-6 sticky top-0 left-0 w-full z-50 ">
+    <!-- الشعار -->
+    <div class="flex items-center ml-14">
+      <img src="../images/Icon (1).png" alt="Logo" class="h-8 w-auto mr-2" />
+      <span class="font-bold text-lg">WhiteCo</span>
+      <span class="font-bold text-lg text-blue-600">ll</span>
+      <span class="font-bold text-lg">ar</span>
+    </div>
+
+    <!-- روابط على الشاشات الكبيرة -->
+    <ul class="hidden md:flex items-center gap-3 font-medium text-[#37393F] mr-1 ">
+      <li><a href="index.html" class="hover:text-[#40DDB6]">Home</a></li>
+      <li><a href="aboutus.html" class="hover:text-[#40DDB6]">About</a></li>
+      <li class="relative group hidden md:block">
+        <button class="hover:text-[#40DDB6] flex items-center gap-1">
+          Pages <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg mt-2 p-7 rounded-lg w-[180px] gap-3">
+          <li><a href="Changelog1.html" class="hover:text-[#40DDB6]">Changlog</a></li>
+          <li><a href="projects.html" class="hover:text-[#40DDB6]">Project</a></li>
+          <li><a href="team1.html" class="hover:text-[#40DDB6]">Team</a></li>
+          <li><a href="Fag1.html" class="hover:text-[#40DDB6]">FAQ</a></li>
+          <li><a href="pricePacks.html" class="hover:text-[#40DDB6]">Price Packs</a></li>
+          <li><a href="servicesSingle.html" class="hover:text-[#40DDB6]">Our Services</a></li>
+          <li><a href="projectsSingle.html" class="hover:text-[#40DDB6]">Projects Single</a></li>
+          <li><a href="blogSingle1.html" class="hover:text-[#40DDB6]">Blog Single</a></li>
+          <li><a href="Password1.html" class="hover:text-[#40DDB6]">Password</a></li>
+          <li><a href="error.html" class="hover:text-[#40DDB6]">Error</a></li>
+          <li><a href="License1.html" class="hover:text-[#40DDB6]">License</a></li>
+
+        </ul>
+      </li>
+      <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Services</a></li>
+      <li><a href="blog1.html" class="hover:text-[#40DDB6]">Blog</a></li>
+      <li><a href="contact1.html" class="hover:text-[#40DDB6]">Contact</a></li>
+
+      <li>
+        <!-- زر استدعاء المودال (الكبير) -->
+        <button onclick="openModal()"
+          class="bg-blue-600 text-white px-5 py-2 w-[184px] h-[65px] hover:bg-blue-700 transition sm:w-auto">
+          Get Consulting
+        </button>
+      </li>
+    </ul>
+
+    <!-- زر الهامبرغر -->
+    <button id="menuToggle" class="md:hidden flex flex-col gap-1 z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-menu-icon lucide-menu">
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+        <path d="M4 6h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- قائمة الموبايل -->
+  <div id="mobileMenu" class="menu fixed top-[90px] right-4 w-[250px] bg-white shadow-lg rounded-lg md:hidden z-40">
+    <ul class="flex flex-col gap-4 p-6 font-medium text-[#37393F]">
+      <li><a href="index.html" class="hover:text-[#40DDB6]">Home</a></li>
+      <li><a href="aboutus.html" class="hover:text-[#40DDB6]">About</a></li>
+      <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Services</a></li>
+      <li><a href="blog1.html" class="hover:text-[#40DDB6]">Blog</a></li>
+      <li><a href="contact1.html" class="hover:text-[#40DDB6]">Contact</a></li>
+
+      <!-- Pages في الموبايل -->
+      <li class="relative">
+        <button id="pagesToggle" class="flex items-center justify-between w-full hover:text-[#40DDB6]">
+          Pages <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <ul id="pagesMenu" class="group-hover:flex flex-col bg-white shadow-lg mt-2 p-7 rounded-lg w-[180px] gap-6">
+          <li><a href="Changelog1.html" class="hover:text-[#40DDB6]">Changlog</a></li>
+          <li><a href="projects.html" class="hover:text-[#40DDB6]">Project</a></li>
+          <li><a href="team1.html" class="hover:text-[#40DDB6]">Team</a></li>
+          <li><a href="Fag1.html" class="hover:text-[#40DDB6]">FAQ</a></li>
+          <li><a href="pricePacks.html" class="hover:text-[#40DDB6]">Price Packs</a></li>
+
+          <li><a href="servicesSingle.html" class="hover:text-[#40DDB6]">Our Services</a></li>
+          <li><a href="projectsSingle.html" class="hover:text-[#40DDB6]">Projects Single</a></li>
+          <li><a href="blogSingle1.html" class="hover:text-[#40DDB6]">Blog Single</a></li>
+          <li><a href="License1.html" class="hover:text-[#40DDB6]">License</a></li>
+          <li><a href="Password1.html" class="hover:text-[#40DDB6]">Password</a></li>
+          <li><a href="error.html" class="hover:text-[#40DDB6]">Error</a></li>
+        </ul>
+      </li>
+
+      <!-- زر الموبايل -->
+      <li>
+        <button onclick="openModal()"
+          class="bg-blue-600 text-white w-full py-3 rounded-md hover:bg-blue-700 transition">
+          Get Consulting
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- المودال -->
+  <div onclick="closeModal()" id="consultingModal"
+    class="fixed inset-0 bg-[#37393FE8] bg-opacity-50 hidden flex items-center justify-center z-50">
+
+    <!-- محتوى المودال -->
+    <div onclick="event.stopPropagation()" class="bg-white p-6 rounded-lg shadow-lg w-[400px] relative">
+
+      <!-- زر الإغلاق -->
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl">
+        &times;
+      </button>
+
+      <h2 class="text-xl font-semibold mb-4">Request Consulting</h2>
+
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name"
+          class="w-full border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#667EEA]">
+        <input type="email" placeholder="Your Email"
+          class="w-full border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#667EEA]">
+        <textarea placeholder="Your Message"
+          class="w-full border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#667EEA]"></textarea>
+
+        <button type="submit" class="w-full bg-[#667EEA] hover:bg-[#5A67D8] text-white py-2 rounded-md">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Hero Section -->
+  <section class="min-h-[500px] flex items-start bg-no-repeat bg-cover bg-center"
+    style="background-image: url('../images/Photo (1).png');" data-aos="zoom-in-down">
+
+    <div class=" flex flex-col justify-center h-[815px] w-full md:w-[650px] px-6 md:px-12 py-10 bg-[#37393FE8]">
+      <!-- Welcome Row -->
+      <div class="flex items-center mb-3 ml-10">
+        <img src="../images/Box (1).png" alt="box" class="w-4 h-4 mr-2" />
+        <span class="text-white text-sm font-semibold">Welcome to Whitecollar Solution</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-white font-extrabold text-3xl md:text-[40px] leading-tight mb-4 ml-10">
+        The Best Value<br>
+        for <span class="text-[#40DDB6]">Business</span> and<br>
+        Corporation
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-gray-300 text-sm md:text-base mb-8 max-w-[90%] ml-10">
+        Collaboratively administrate empowered markets plug <br class="hidden md:block" />
+        and play networks dynamically procrastinated.
+      </p>
+
+      <!-- Buttons Row -->
+      <div class="flex flex-wrap items-center gap-4 md:gap-6 ml-10">
+        <button onclick="openModal()"
+          class="bg-[#40DDB6] text-[#222] font-bold px-6 py-3 transition hover:bg-[#34b89c]">
+          Get Consulting
+        </button>
+
+        <a href="https://www.youtube.com/" class="flex items-center gap-3 text-white font-medium hover:underline">
+
+          <!-- أيقونة تشغيل -->
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#6B77E5]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="white" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+
+          <!-- النص -->
+          <span>Watch Videos</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-white py-10" data-aos="zoom-in-down">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto px-6">
+
+      <!-- العمود الأيسر -->
+      <div class="bg-[#F4F4F4] flex flex-col items-center md:items-end justify-center p-6 md:p-10">
+        <img src="../images/Photo.jpg" alt="Team" class="w-full max-w-[350px] h-auto object-cover mb-6" />
+        <h2 class="text-2xl md:text-[27px] font-bold text-gray-900 leading-snug mb-3 text-center md:text-right">
+          We’re Ready To Grow Your <br>Business With Us
+        </h2>
+        <p class="text-gray-500 text-sm md:text-[16px] leading-relaxed mb-5 text-center md:text-right">
+          Leverage agile frameworks to provide a robust <br class="hidden md:block" />
+          synopsis for high level overviews. thinking to<br class="hidden md:block" />
+          further the overall value proposition.
+        </p>
+        <a href="#" class="text-sm font-semibold text-gray-900 underline hover:text-[#6B77E5] transition">
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- العمود الأيمن -->
+      <div class="flex flex-col justify-center space-y-4">
+        <span class="text-black text-sm font-medium flex items-center gap-2">
+          <img src="../images/Box (1).png" alt="box" class="w-4 h-4" />
+          Welcome Whitecollar
+        </span>
+
+        <h2 class="text-2xl md:text-[32px] font-bold text-gray-900 leading-snug">
+          We Care About Your Business Plan.
+        </h2>
+
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+          corporate strategy foster collaborative thinking to further the overall.
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+          corporate strategy.
+        </p>
+
+        <!-- القائمة -->
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2">
+            <span class="bg-[#6B77E5] w-5 h-5 flex items-center justify-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="white"
+                stroke-width="3">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+            </span>
+            <span class="text-gray-800 font-medium">Components of a Business Strategy</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="bg-[#6B77E5] w-5 h-5 flex items-center justify-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="white"
+                stroke-width="3">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+            </span>
+            <span class="text-gray-800 font-medium">Business Consulting</span>
+          </li>
+        </ul>
+
+        <!-- البوكسات -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <div class="border border-gray-200 p-5 flex items-start gap-4 bg-white flex-1">
+            <img src="../images/Icon (4).png" alt="Experience Icon" class="w-10 h-10">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg">Experience</h3>
+              <p class="text-gray-500 text-sm">Leverage frameworks to provide werement.</p>
+            </div>
+          </div>
+          <div class="border border-gray-200 p-5 flex items-start gap-4 bg-white flex-1">
+            <img src="../images/Icon (5).png" alt="Award Icon" class="w-10 h-10">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg">Awards Winner</h3>
+              <p class="text-gray-500 text-sm">Leverage frameworks to provide werement.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- الزر -->
+        <a href="aboutus.html"
+          class="bg-[#6B77E5] text-white text-base md:text-[18px] font-bold px-6 py-4 transition hover:bg-[#5a66d0] mt-6 w-fit">
+          More About Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- قسم الشعارات -->
+  <section class="py-8 bg-white flex items-end min-h-[160px] mt-16" data-aos="zoom-in-down">
+    <div class="container mx-auto flex justify-center items-end">
+      <!-- Swiper -->
+      <div class="swiper mySwiper w-full max-w-5xl">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex justify-center">
+            <img src="../images/01.png" alt="Logo 1" class="h-10 md:h-12 object-contain" />
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="../images/01.png" alt="Logo 1" class="h-10 md:h-12 object-contain" />
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="../images/02.png" alt="Logo 2" class="h-14 md:h-16 object-contain" />
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="../images/03.png" alt="Logo 3" class="h-10 md:h-12 object-contain" />
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="../images/04.png" alt="Logo 4" class="h-10 md:h-12 object-contain" />
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="../images/05.png" alt="Logo 5" class="h-14 md:h-16 object-contain" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الخدمات -->
+  <section class="py-12 bg-white " data-aos="zoom-in-down">
+    <div class="container mx-auto px-4">
+      <!-- العنوان -->
+      <div class="text-center mb-12">
+        <p class="text-black text-sm font-medium mb-2 flex items-center justify-center gap-2">
+          <img src="../images/Box (1).png" alt="box" class="w-4 h-4" />
+          We Are Expertise In
+        </p>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+          We Provide Professional <br class="hidden md:block"> Business Solutions.
+        </h2>
+      </div>
+
+      <!-- شبكة الخدمات -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+
+        <!-- البطاقة 1 -->
+        <div class="bg-[#F4F4F4] flex justify-between p-6 ">
+          <div>
+            <h3 class="text-[22px] md:text-[26px] font-bold text-[#37393F] leading-snug mb-5">
+              Financial <br> Consultancy
+            </h3>
+            <a href="ourServices.html" class="text-[#6B7AFF] text-[16px] md:text-[18px] font-bold">Read More</a>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="../images/Icon (7).png" alt="icon" class="w-16 h-16 md:w-20 md:h-20" />
+          </div>
+        </div>
+
+        <!-- البطاقة 2 -->
+        <div class="bg-[#F4F4F4] flex justify-between p-6 ">
+          <div>
+            <h3 class="text-[22px] md:text-[26px] font-bold text-[#37393F] leading-snug mb-5">
+              Business Management
+            </h3>
+            <a href="ourServices.html" class="text-[#6B7AFF] text-[16px] md:text-[18px] font-bold">Read More</a>
+          </div>
+          <div class=" flex items-center justify-center ">
+            <img src="../images/Icon (9).png" alt="icon" class="w-16 h-16 md:w-20 md:h-20" />
+          </div>
+        </div>
+
+        <!-- البطاقة 3 -->
+        <div class="bg-[#F4F4F4] flex justify-between p-6 ">
+          <div>
+            <h3 class="text-[22px] md:text-[26px] font-bold text-[#37393F] leading-snug mb-5">
+              Consultants & Program
+            </h3>
+            <a href="ourServices.html" class="text-[#6B7AFF] text-[16px] md:text-[18px] font-bold">Read More</a>
+          </div>
+          <div class=" flex items-center justify-center ">
+            <img src="../images/Icon (13).png" alt="icon" class="w-16 h-16 md:w-20 md:h-20" />
+          </div>
+        </div>
+
+        <!-- البطاقة 4 -->
+        <div class="bg-[#F4F4F4] flex justify-between p-6 ">
+          <div>
+            <h3 class="text-[22px] md:text-[26px] font-bold text-[#37393F] leading-snug mb-5">
+              Company Management
+            </h3>
+            <a href="ourServices.html" class="text-[#6B7AFF] text-[16px] md:text-[18px] font-bold">Read More</a>
+          </div>
+          <div class=" flex items-center justify-center ">
+            <img src="../images/Icon (14).png" alt="icon" class="w-16 h-16 md:w-20 md:h-20" />
+          </div>
+        </div>
+
+        <!-- البطاقة 5 -->
+        <div class="bg-[#F4F4F4] flex justify-between p-6">
+          <div>
+            <h3 class="text-[22px] md:text-[26px] font-bold text-[#37393F] leading-snug mb-5">
+              Financial & <br> Insurance Jobs
+            </h3>
+            <a href="ourServices.html" class="text-[#6B7AFF] text-[16px] md:text-[18px] font-bold">Read More</a>
+          </div>
+          <div class=" flex items-center justify-center">
+            <img src="../images/Icon (15).png" alt="icon" class="w-16 h-16 md:w-20 md:h-20" />
+          </div>
+        </div>
+
+        <!-- البطاقة 6 (زر المزيد) -->
+        <a href="servicesSingle.html"
+          class="text-white font-medium text-[20px] md:text-[24px] bg-[#6B7AFF] flex items-center justify-center h-[160px]">
+          More Services
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Hero Section -->
+  <section class="flex flex-col lg:flex-row" data-aos="fade-zoom-in">
+    <!-- Left Side -->
+    <div data-aos="fade-right"
+      class="bg-[#37393F] text-white w-full lg:w-1/2 flex flex-col justify-center px-6 md:px-10 lg:px-14 py-12 md:py-16 lg:py-20">
+      <!-- العنوان الصغير -->
+      <span class="text-sm font-medium mb-6 flex items-center gap-2">
+        <span class="w-2 h-2 bg-[#40DDB6] inline-block"></span>
+        Why Choose Me
+      </span>
+
+      <!-- العنوان الرئيسي -->
+      <h2 class="text-2xl md:text-[32px] lg:text-[38px] font-bold leading-tight mb-6">
+        We Provide Solutions To <br class="hidden md:block"> Grow Your Business
+      </h2>
+
+      <!-- الوصف -->
+      <p class="text-gray-300 leading-relaxed mb-10 max-w-lg text-sm md:text-base">
+        Leverage agile frameworks to provide a robust synopsis for high level overviews. thinking to further the overall
+        proposition.
+      </p>
+
+      <!-- صندوق النسب -->
+      <div class="flex flex-col sm:flex-row gap-6 mb-10">
+        <!-- 95% -->
+        <div class="bg-[#2E2F34] px-6 md:px-8 py-6 flex items-center gap-5 flex-1">
+          <div class="relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="28" stroke="#2E2F34" stroke-width="8" fill="none" />
+              <circle cx="32" cy="32" r="28" stroke="#40DDB6" stroke-width="5" fill="none" stroke-dasharray="176"
+                stroke-dashoffset="8" />
+            </svg>
+            <span class="absolute font-bold text-sm md:text-lg">95%</span>
+          </div>
+          <div>
+            <span class="text-xs md:text-sm text-gray-400">Clients</span>
+            <span class="block font-semibold text-sm md:text-[17px]">Quick Response</span>
+          </div>
+        </div>
+
+        <!-- 85% -->
+        <div class="bg-[#2E2F34] px-6 md:px-8 py-6 flex items-center gap-5 flex-1">
+          <div class="relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="28" stroke="#2E2F34" stroke-width="8" fill="none" />
+              <circle cx="32" cy="32" r="28" stroke="#40DDB6" stroke-width="5" fill="none" stroke-dasharray="176"
+                stroke-dashoffset="26" />
+            </svg>
+            <span class="absolute font-bold text-sm md:text-lg">85%</span>
+          </div>
+          <div>
+            <span class="text-xs md:text-sm text-gray-400">Project</span>
+            <span class="block font-semibold text-sm md:text-[17px]">Finished Jobs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- الإحصائيات -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm md:text-base">
+        <!-- 2800+ -->
+        <div class="flex items-center gap-2">
+          <span class="bg-[#40DDB6] w-5 h-5 flex items-center justify-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="white"
+              stroke-width="3">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </span>
+          <span><strong>2,800+</strong> Active clients</span>
+        </div>
+
+        <!-- 106+ -->
+        <div class="flex items-center gap-2">
+          <span class="bg-[#40DDB6] w-5 h-5 flex items-center justify-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="white"
+              stroke-width="3">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </span>
+          <span class="font-extrabold text-lg">106+</span>
+        </div>
+
+
+        <!-- Reviews -->
+        <div class="flex items-center gap-3">
+          <span class="bg-[#40DDB6] w-6 h-6 flex items-center justify-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white"
+              stroke-width="3">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </span>
+          <span>
+            <strong>1,670+</strong>
+            <span class="text-yellow-400 font-bold">5 ★ stars</span>
+            <span class="text-white/80">reviews</span>
+          </span>
+        </div>
+
+        <!-- Get in touch -->
+        <div>
+          <a href="#contact-form" class="text-[#40DDB6] underline font-bold text-base">Get In Touch</a>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="w-full lg:w-1/2">
+      <img src="../images/Photo (2).jpg" alt="People" class="w-full h-80 sm:h-[500px] lg:h-full object-cover" />
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section class="container mx-auto px-8 py-16" data-aos="zoom-in-down">
+    <!-- العنوان والزر -->
+    <div class="w-full flex justify-around flex-row items-center mb-12">
+      <div>
+        <span class="text-black text-sm font-medium block mb-2 flex items-center gap-2">
+          <img src="../images/Box (1).png" alt="icon" class="w-3 h-3" />Our Project
+        </span>
+        <h2 class="text-[40px] font-bold text-gray-900 leading-snug">
+          You can check our projects <br />
+          as inspirations.
+        </h2>
+      </div>
+      <a href="projects.html"
+        class="bg-[#40DDB6] text-white px-10 py-5 text-[18px] hover:bg-[#34b89c] transition w-[185px] h-[65px]">
+        More Work
+      </a>
+    </div>
+
+    <!-- شبكة الصور -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div>
+        <img src="../images/Image (1).png" alt="Project 1" class="w-full h-[400px] object-cover" />
+      </div>
+      <div>
+        <img src="../images/Image (4).png" alt="Project 2" class="w-full h-[400px] object-cover" />
+      </div>
+      <div>
+        <img src="../images/Photo (4).png" alt="Project 3" class="w-full h-[400px] object-cover" />
+      </div>
+      <div>
+        <img src="../images/Photo (5).png" alt="Project 4" class="w-full h-[400px] object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section id="testimonials" class="container mx-auto px-6 md:px-8 py-16 bg-white" data-aos="zoom-in-down">
+    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10">
+
+      <!-- العمود الأيسر -->
+      <div class="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-1/3">
+        <span class="flex items-center justify-center lg:justify-start gap-2 text-sm font-medium mb-3">
+          <img src="../images/Box (1).png" alt="icon" class="w-3 h-3" />
+          Testimonial
+        </span>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 leading-snug">
+          What Our <br class="hidden md:block"> Client Say’s
+        </h2>
+        <p class="text-gray-500 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
+          Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
+        </p>
+      </div>
+
+      <!-- الكروت -->
+      <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-6 lg:w-2/3">
+
+        <!-- الكارت الأول -->
+        <div
+          class="bg-gray-50 p-6 md:p-8 flex flex-col items-start w-full sm:w-1/2 lg:w-full xl:w-[311px] min-h-[300px]">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="../images/Image (6).png" alt="Nattasha Kelvin"
+              class="w-16 h-16 rounded-full object-cover border-4 border-white shadow">
+            <div>
+              <h4 class="font-bold text-lg">Nattasha Kelvin</h4>
+              <span class="text-gray-500 text-sm">Designer</span>
+              <div class="text-yellow-400 text-base leading-none">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-gray-600 text-base italic leading-relaxed">
+            “Add an excerpt from your personal biography, or simply let the world know who you are and what you have to
+            offer. Connect with your site visitor’s on a personal level and make sure that your site.”
+          </p>
+        </div>
+
+        <!-- الكارت الثاني -->
+        <div
+          class="bg-gray-50 p-6 md:p-8 flex flex-col items-start w-full sm:w-1/2 lg:w-full xl:w-[300px] min-h-[260px]">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="../images/Image (5).png" alt="Cincinnati"
+              class="w-16 h-16 rounded-full object-cover border-4 border-white shadow">
+            <div>
+              <h4 class="font-bold text-lg">Cincinnati</h4>
+              <span class="text-gray-500 text-sm">Designer</span>
+              <div class="text-yellow-400 text-base leading-none">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-gray-600 text-base italic leading-relaxed">
+            “Leverage agile frameworks to provide a robust synopsis for high level overviews”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- How We Work / Book Now Section -->
+  <section class="py-24 bg-[#6B77E5]" data-aos="zoom-in-down">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-20">
+        <!-- Left Content -->
+        <div class="md:w-1/2 text-white">
+          <!-- Section Title -->
+          <div class="mb-6 flex items-center gap-2">
+            <img src="../images/Box (1).png" alt="icon" class="w-4 h-4" />
+            <span class="text-[18px] font-semibold tracking-wider text-white">Book Now</span>
+          </div>
+
+          <!-- Heading -->
+          <h2 class="text-[28px] sm:text-[40px] font-extrabold mb-6 leading-snug">
+            To Get Your Business<br />To The Next Level
+          </h2>
+
+          <!-- Description -->
+          <p class="mb-8 text-base text-white/90 max-w-lg leading-relaxed">
+            Leverage agile frameworks to provide synopsis for high level
+            overviews. Iterative approaches to corporate strategy foster
+            collaborative thinking to further the overall.
+          </p>
+
+          <!-- Stats Card -->
+          <div
+            class="bg-[#29C4A9] rounded-md p-6 flex flex-col sm:flex-row items-center gap-6 shadow-lg max-w-xl mb-20">
+            <!-- Circle -->
+            <div
+              class="border-4 border-[#6B77E5] rounded-full w-28 h-28 sm:w-32 sm:h-32 flex flex-col items-center justify-center">
+              <span class="text-white font-extrabold text-2xl sm:text-3xl">562+</span>
+              <span class="text-white text-sm font-semibold">Project</span>
+            </div>
+            <!-- Text -->
+            <div class="text-white text-base sm:text-lg leading-snug">
+              We have <span class="font-bold">50+</span> years of
+              experience.<br />
+              We offer <span class="font-bold">whitecollar</span> services to
+              you
+            </div>
+          </div>
+
+          <!-- Bullet Points -->
+          <ul class="mt-2 space-y-6">
+            <!-- Planning -->
+            <li class="flex items-start gap-4 pb-6 border-b border-white/30 mt-10">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full">
+                <img src="../images/Vector (1).png" alt="icon" class="w-7 h-7" />
+              </span>
+              <div>
+                <span class="block text-[20px] sm:text-[22px] font-bold text-white mb-1">Planning</span>
+                <span class="block text-[15px] sm:text-[17px] text-white/80 leading-snug">
+                  Leverage agile frameworks to provide synopsis for high level overviews.
+                </span>
+              </div>
+            </li>
+
+            <!-- Briefing -->
+            <li class="flex items-start gap-4 py-6 border-b border-white/30">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full">
+                <img src="../images/Vector (1).png" alt="icon" class="w-7 h-7" />
+              </span>
+              <div>
+                <span class="block text-[20px] sm:text-[22px] font-bold text-white mb-1">Briefing</span>
+                <span class="block text-[15px] text-white/80 leading-snug">
+                  Leverage agile frameworks to provide synopsis for high level approaches.
+                </span>
+              </div>
+            </li>
+
+            <!-- Evaluation-->
+            <li class="flex items-start gap-4 pt-6 mt-6">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full">
+                <img src="../images/Vector (1).png" alt="icon" class="w-7 h-7" />
+              </span>
+              <div>
+                <span class="block text-[20px] sm:text-[22px] font-bold text-white">Evaluation</span>
+                <span class="block text-[15px] sm:text-[17px] text-white/80 leading-snug">
+                  Leverage agile frameworks to provide synopsis for high level overviews.
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Section -->
+        <div class="md:w-1/2 flex flex-col justify-center px-4 sm:px-6">
+          <!-- العنوان والنص فوق الفورم -->
+          <div class="mb-0">
+            <div class="mb-6 flex items-center gap-2">
+              <img src="../images/Box (1).png" alt="icon" class="w-4 h-4" />
+              <span class="text-[18px] font-semibold tracking-wider text-white">Book Now</span>
+            </div>
+            <h3 class="text-[28px] sm:text-[40px] font-extrabold mb-8 text-white leading-snug">
+              Get Free Business Appointment
+            </h3>
+          </div>
+
+          <!-- الفورم -->
+          <div id="contact-form" class="bg-white p-6 sm:p-8 w-full max-w-[500px] rounded-lg shadow-md">
+            <form class="flex flex-col gap-6 sm:gap-8">
+              <!-- Name -->
+              <input type="text" placeholder="Your name"
+                class="w-full h-[50px] border border-[#DDDDDD] px-4 text-[16px] sm:text-[18px] focus:outline-none focus:ring-2 focus:ring-[#40DDB6] bg-[#FAFAFA]" />
+
+              <!-- Email -->
+              <input type="email" placeholder="Email Address"
+                class="w-full h-[50px] border border-[#DDDDDD] px-4 text-[16px] sm:text-[18px] focus:outline-none focus:ring-2 focus:ring-[#40DDB6] bg-[#FAFAFA]" />
+
+              <!-- Phone -->
+              <input type="text" placeholder="Phone Number"
+                class="w-full h-[50px] border border-[#DDDDDD] px-4 text-[16px] sm:text-[18px] focus:outline-none focus:ring-2 focus:ring-[#40DDB6] bg-[#FAFAFA]" />
+
+              <!-- Date + Time -->
+              <div class="flex flex-col sm:flex-row gap-4">
+                <input type="date" placeholder="Date"
+                  class="w-full sm:w-1/2 h-[50px] border border-[#DDDDDD] px-4 text-[16px] sm:text-[18px] focus:outline-none focus:ring-2 focus:ring-[#40DDB6] bg-[#FAFAFA]" />
+                <input type="time" placeholder="Time"
+                  class="w-full sm:w-1/2 h-[50px] border border-[#DDDDDD] px-4 text-[16px] sm:text-[18px] focus:outline-none focus:ring-2 focus:ring-[#40DDB6] bg-[#FAFAFA]" />
+              </div>
+
+              <textarea placeholder="Service Description" class="w-full h-[120px] sm:h-[140px] border border-[#DDDDDD] px-4 py-3 text-[16px] sm:text-[18px] 
+              focus:outline-none focus:ring-2 focus:ring-[#40DDB6] bg-[#FAFAFA] resize-none"></textarea>
+
+              <!-- Button -->
+              <button type="submit"
+                class="bg-[#40DDB6] text-[#37393F] font-bold text-[16px] sm:text-[18px] hover:bg-[#34b89c] transition w-full sm:w-[184px] h-[55px] sm:h-[65px] rounded-md">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="relative w-full min-h-[400px] md:min-h-[734px]" data-aos="zoom-in-down">
+    <!-- الخلفية -->
+    <img src="../images/Photo (3).jpg" alt="Our Expert Team" class="w-full h-[734px] object-cover">
+
+    <!-- النص في المنتصف -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="bg-[#37393FE8] px-6 sm:px-12 md:px-24 py-10 sm:py-16 rounded">
+        <h2 class="text-white text-[28px] sm:text-[36px] md:text-[40px] font-bold text-center">Our Expert Team</h2>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Blog Section -->
+  <section class="py-16 bg-white" data-aos="zoom-in-down">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between mb-8">
+      <div class="mb-6 md:mb-0">
+        <p class="text-sm text-gray-500 mb-2 text-[18px] flex items-center">
+          <img src="../images/Box (1).png" alt="icon" class="w-3 h-3 mr-2" />
+          Our Recent News
+        </p>
+        <h2 class="text-3xl font-bold mb-0 md:text-[40px]">Latest Posts</h2>
+      </div>
+      <a href="blog1.html" class="text-white bg-[#37393F] text-[18px] px-10 py-3 text-center ">
+        Read More
+      </a>
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 container mx-auto px-6 ">
+      <!-- Blog Card 1 -->
+      <div class="bg-white overflow-hidden ">
+        <img src="../images/Photo (2).png" alt="Blog 1" class="w-full h-64 md:h-[363px] object-cover" />
+
+        <!-- شريط التاريخ والكاتب -->
+        <div class="flex flex-col sm:flex-row w-full">
+          <!-- التاريخ -->
+          <span class="bg-[#4A3AFF] text-white text-[16px] flex items-center justify-center px-4 py-3 sm:flex-1">
+            April 13 / 2021
+          </span>
+
+          <!-- الكاتب -->
+          <span class="bg-[#40DDB6] text-black text-[16px] flex items-center justify-center gap-2 px-4 py-3 sm:flex-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="#207F68" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg> Miranda Doe
+          </span>
+
+          <!-- التصنيف -->
+          <span
+            class="bg-[#40DDB6] text-black text-[16px] flex items-center justify-center gap-2 px-4 py-3 sm:flex-1 border-t sm:border-t-0 sm:border-l border-black">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="#207F68" viewBox="0 0 16 16">
+              <path d="M2 2v2h1v10h10V4h1V2H2zm11 2v9H3V4h10z" />
+              <path d="M5 6h6v1H5V6zm0 2h6v1H5V8zm0 2h4v1H5v-1z" />
+            </svg> Business
+          </span>
+        </div>
+
+        <!-- المحتوى -->
+        <div class="p-6">
+          <h3 class="font-bold text-xl md:text-[30px] mb-4">
+            A Business Consulting That Can Produce
+          </h3>
+          <p class="text-gray-600 mb-4 text-[16px] md:text-[18px]">
+            Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking.
+          </p>
+          <a href="blogSingle1.html" class="text-[#4A3AFF] hover:underline text-[16px] md:text-[18px]">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="bg-white overflow-hidden ">
+        <img src="../images/Photo (3).png" alt="Blog 2" class="w-full h-64 md:h-[363px] object-cover" />
+
+        <div class="flex flex-col sm:flex-row w-full">
+          <span class="bg-[#4A3AFF] text-white text-[16px] flex items-center justify-center px-4 py-3 sm:flex-1">
+            April 13 / 2021
+          </span>
+
+          <span class="bg-[#40DDB6] text-black text-[16px] flex items-center justify-center gap-2 px-4 py-3 sm:flex-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="#207F68" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg> Miranda Doe
+          </span>
+
+          <span
+            class="bg-[#40DDB6] text-black text-[16px] flex items-center justify-center gap-2 px-4 py-3 sm:flex-1 border-t sm:border-t-0 sm:border-l border-black">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="#207F68" viewBox="0 0 16 16">
+              <path d="M2 2v2h1v10h10V4h1V2H2zm11 2v9H3V4h10z" />
+              <path d="M5 6h6v1H5V6zm0 2h6v1H5V8zm0 2h4v1H5v-1z" />
+            </svg> Business
+          </span>
+        </div>
+
+        <div class="p-6">
+          <h3 class="font-bold text-xl md:text-[30px] mb-4">
+            Team Identifiers, Benefits, And How to Build one that Works
+          </h3>
+          <p class="text-gray-600 mb-4 text-[16px] md:text-[18px]">
+            Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking.
+          </p>
+          <a href="blogSingle1.html" class="text-[#4A3AFF] hover:underline text-[16px] md:text-[18px]">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe Box -->
+  <section id="Subscribe" class="relative w-full max-w-6xl mx-auto overflow-hidden mb-12 mt-12 rounded-lg"
+    data-aos="zoom-in-down">
+    <!-- الخلفية -->
+    <img src="../images/Photo (4).jpg" alt="Whitecollar Service" class="w-full h-[400px] md:h-[525px] object-cover">
+
+    <!-- التدرج الأخضر -->
+    <div class="absolute inset-0 bg-teal-400/70"></div>
+
+    <!-- المحتوى -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+      <div class="flex items-center gap-2 mb-3">
+        <img src="../images/Box.png" alt="icon" class="w-3 h-3" />
+        <span class="text-black text-sm font-medium">Subscribe Whitecollar</span>
+      </div>
+
+      <h2 class="text-2xl md:text-[40px] font-bold text-black mb-4">
+        Need An Experienced <br><span class="text-white">Whitecollar</span> job Service? Contact Us
+      </h2>
+
+      <p class="text-black/80 text-[16px] md:text-[18px] max-w-2xl leading-relaxed mb-6">
+        Leverage agile frameworks to provide a robust synopsis for high level overviews.
+        Iterative approaches to corporate strategy foster collaborative thinking further the overall.
+      </p>
+
+      <button id="openPopup" class="bg-[#6B77E5] text-white px-6 py-3 font-medium hover:bg-[#5a65d0]">
+        Contact Us
+      </button>
+    </div>
+  </section>
+
+  <!-- Popup -->
+  <div id="popup" class="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 hidden ">
+    <div id="target_popup" class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative animate-fade-in">
+
+      <button id="closePopup" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">&times;</button>
+
+      <h3 class="text-xl font-bold mb-4 text-[#6B77E5] ml-10">Contact us </h3>
+      <p class="text-gray-700 mb-6">
+        Please fill in your details and we'll get back to you as soon as possible.
+      </p>
+
+      <form id="popupForm" class="space-y-4">
+        <input type="text" placeholder="Your Name"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#6B77E5]"
+          required>
+        <input type="email" placeholder="Your Email"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#6B77E5]"
+          required>
+        <textarea placeholder="Your Message" rows="3"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#6B77E5] resize"
+          required></textarea>
+
+        <button type="submit"
+          class="w-full bg-[#6B77E5] text-white px-4 py-2 rounded-lg hover:bg-[#5a65d0] transition duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-[#37393F] text-white pt-12 pb-6" data-aos="zoom-in-down">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- Row 1 -->
+      <div
+        class="flex flex-col lg:flex-row items-center lg:items-start justify-between border-b border-gray-700 pb-6 mb-6 gap-8 text-center lg:text-left">
+
+        <!-- Logo -->
+        <div class="flex items-center justify-center lg:justify-start gap-0 pt-3">
+          <img src="../images/Icon (1).png" alt="icon" class="h-8 w-auto" />
+          <span class="font-bold text-xl">WhiteCo</span>
+          <span class="font-bold text-xl text-[#40DDB6]">ll</span>
+          <span class="font-bold text-xl">ar</span>
+        </div>
+
+        <!-- Call -->
+        <div class="flex items-center justify-center lg:justify-start gap-3">
+          <img src="../images/Icon (2).png" alt="call" class="h-12 w-12" />
+          <div>
+            <strong>Call Us</strong><br />
+            <a href="tel:+01569896654" class="text-gray-400 hover:text-[#40DDB6]">+01 569 896 654</a>
+          </div>
+        </div>
+
+        <!-- Mail -->
+        <div class="flex items-center justify-center lg:justify-start gap-3">
+          <img src="../images/Icon (3).png" alt="mail" class="h-12 w-12" />
+          <div>
+            <strong>Mail Us</strong><br />
+            <a href="mailto:info@example.com" class="text-gray-400 hover:text-[#40DDB6]">info@example.com</a>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="flex items-center justify-center lg:justify-start gap-3">
+          <img src="../images/Message.png" alt="loc" class="h-12 w-12" />
+          <div>
+            <strong>Location</strong><br />
+            <a href="https://maps.google.com/?q=Amsterdam,109-74" target="_blank"
+              class="text-gray-400 hover:text-[#40DDB6]">
+              Amsterdam, 109-74
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left justify-items-center">
+
+
+        <!-- Quick Link -->
+        <div>
+          <h6 class="font-bold mb-3 flex items-center text-[#40DDB6] gap-2">
+            <img src="../images/Box.png" altIcon (1).png="icon" class="w-3 h-3 ml-2" />Quick Link
+          </h6>
+          <ul class="space-y-2 text-gray-300 text-[15px]">
+            <li><a href="index.html" class="hover:text-[#40DDB6]">Home</a></li>
+            <li><a href="aboutus.html" class="hover:text-[#40DDB6]">About Us</a></li>
+            <li><a href="blog1.html" class="hover:text-[#40DDB6]">Blog</a></li>
+            <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Services</a></li>
+            <li><a href="contact1.html" class="hover:text-[#40DDB6]">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services -->
+        <div>
+          <h6 class="font-bold mb-3 flex items-center text-[#40DDB6] gap-2">
+            <img src="../images/Box.png" altIcon (1).png="icon" class="w-3 h-3 ml-2" />Our Services
+          </h6>
+          <ul class="space-y-2 text-gray-300 text-[15px]">
+            <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Financial Consulting</a></li>
+            </li>
+            <li>
+            <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Business Management</a></li>
+            </li>
+            <li>
+            <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Consultant & Programs</a></li>
+            </li>
+            <li>
+            <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Company Management</a></li>
+            </li>
+            <li>
+            <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Insurance & Finance</a></li>
+          </ul>
+        </div>
+
+        <!-- Utility Page -->
+        <div>
+          <h6 class="font-bold mb-3 flex items-center text-[#40DDB6] gap-2">
+            <img src="../images/Box.png" altIcon (1).png="icon" class="w-3 h-3 ml-2" />Utility Page
+          </h6>
+          <ul class="space-y-2 text-gray-300 text-[15px]">
+            <li><a href="#" class="hover:text-[#40DDB6]">Style Guide</a></li>
+            <li><a href="License1.html" class="hover:text-[#40DDB6]">Licenses</a></li>
+            <li><a href="Password1.html" class="hover:text-[#40DDB6]">Instructions</a></li>
+            <li><a href="Changelog1.html" class="hover:text-[#40DDB6]">Changelog</a></li>
+            <li><a href="error.html" class="hover:text-[#40DDB6]">404 Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Subscribe -->
+        <div>
+          <div class="bg-[#3A3B40] p-6 rounded-lg text-center lg:text-left">
+            <h4 class="font-bold text-[18px] mb-2">Subscribe</h4>
+            <p class="mb-4 text-[14px] text-gray-300">Join Our Mailing List & get our news.</p>
+
+            <!-- Form -->
+            <form class="flex flex-col sm:flex-row w-full max-w-md gap-2 sm:gap-0">
+              <input type="email" placeholder="your email address"
+                class="w-full p-3 rounded-md sm:rounded-l-md sm:rounded-r-none bg-white text-black focus:outline-none" />
+              <button type="submit"
+                class="bg-[#6B77E5] text-white px-5 py-3 rounded-md sm:rounded-l-none sm:rounded-r-md hover:bg-[#5a65d4] transition w-full sm:w-auto">
+                Subscribe
+              </button>
+            </form>
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- Row 3 -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-4 text-sm gap-3 text-center md:text-left">
+        <div>
+          Copyright © <span class="text-[#40DDB6]">WhiteCollar</span> | Designed by
+          <span class="text-[#6B77E5]">VictorFlow</span> Templates - Powered by Webflow
+        </div>
+        <div class="flex items-center justify-center md:justify-start gap-3">
+          <span>Follow:</span>
+          <a href="https://www.facebook.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="https://twitter.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter">
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+            </svg></a>
+          <a href="https://www.instagram.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg></a>
+          <a href="https://www.youtube.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube">
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+              <path d="m10 15 5-3-5-3z" />
+            </svg></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn"
+    class=" fixed bottom-6 left-6 bg-[#6B77E5] text-white p-4 rounded-full  hover:bg-teal-400 transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-arrow-up-icon lucide-arrow-up">
+      <path d="m5 12 7-7 7 7" />
+      <path d="M12 19V5" />
+    </svg>
+  </button>
+
+
+  <!-- JS Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#scrollTopBtn').hide();
+    $(window).scroll((e) => {
+      if ($(window).scrollTop() >= 150) {
+        $('#scrollTopBtn').fadeIn(20);
+      } else {
+        $('#scrollTopBtn').fadeOut(20);
+      }
+    });
+    $('#scrollTopBtn').click((e) => {
+      $('html, body').animate({ scrollTop: 0 });
+
+    });
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 5,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        320: { slidesPerView: 2 },
+        640: { slidesPerView: 3 },
+        1024: { slidesPerView: 5 },
+      },
+    });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const pagesToggle = document.getElementById("pagesToggle");
+    const pagesMenu = document.getElementById("pagesMenu");
+    const lines = menuToggle.querySelectorAll(".line");
+
+    // فتح/إغلاق منيو الموبايل
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+
+      // شكل زر الهامبرغر يتحول X
+      lines[0].classList.toggle("rotate-45");
+      lines[0].classList.toggle("translate-y-2");
+      lines[1].classList.toggle("opacity-0");
+      lines[2].classList.toggle("-rotate-45");
+      lines[2].classList.toggle("-translate-y-2");
+    });
+
+    // فتح/إغلاق Pages في الموبايل
+    pagesToggle.addEventListener("click", () => {
+      pagesMenu.classList.toggle("hidden");
+    });
+
+    // فتح وإغلاق المودال
+    function openModal() {
+      document.getElementById('consultingModal').classList.remove('hidden');
+    }
+    function closeModal() {
+      document.getElementById('consultingModal').classList.add('hidden');
+    }
+
+
+
+
+    $(document).ready(function () {
+      $('.menu').hide(); // إخفاء القائمة في البداية
+      $('#menuToggle').click(function () {
+        if ($('.menu').hasClass('hidden')) {
+          $('.menu').fadeIn();
+        } else {
+          $('.menu').fadeOut();
+        }
+      });
+    });
+  </script>
+
+  <!--  AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: false,
+      mirror: true
+    })
+
+
+    // const openPopup = document.getElementById('openPopup'); 
+    // const closePopup = document.getElementById('closePopup')
+    // const popup = document.getElementById('popup');
+
+    $('#openPopup').click((e) => {
+      $('#popup').removeClass('hidden');
+    })
+    $('#closePopup').click((e) => {
+      $('#popup').addClass('hidden');
+    })
+    $('#popup').click((e) => {
+      $('#popup').addClass('hidden');;
+    })
+    $('#target_popup').click((e) => {
+      e.stopPropagation()
+
+    });
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Inter font import -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Test</title>
+  <link rel="stylesheet" href="../output.css" />
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-white" style="font-family: 'Inter', sans-serif">
+
+<!-- Top Bar -->
+<div class="bg-[#37393F] py-2 px-4 text-xs text-white w-full hidden md:block">
+  <div class="container mx-auto flex items-center justify-between">
+    <!-- Left: Address -->
+    <div class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#40DDB6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <a href="https://maps.google.com/?q=24 Olive Street, Prairie, NY 53590">24 Olive Street, Prairie, NY 53590</a>
+    </div>
+
+    <!-- Center: Email -->
+    <div class="flex items-center gap-2 ">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#40DDB6">
+        <rect width="20" height="14" x="2" y="5" rx="2" />
+        <path d="M22 7.5 12 13 2 7.5" />
+      </svg>
+      <a href="mailto:whitecollar@gmail.com">whitecollar@gmail.com</a>
+    </div>
+
+    <!-- Right: Time & Social -->
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 ">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#40DDB6">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 6v6l4 2" />
+        </svg>
+        <span>Mon - Fri: 8:00 am - 5:00 pm</span>
+      </div>
+      <div class="flex items-center gap-5">
+   <a href="https://instagram.com" class="hover:text-[#40DDB6]" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <circle cx="17.5" cy="6.5" r="1" />
+            </svg></a>
+          <a href="https://Facebook.com" class="hover:text-[#40DDB6]" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="https://Twitter.com" class="hover:text-[#40DDB6]" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4.36a9.09 9.09 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.5 0-4.52 2.01-4.52 4.5 0 .35.04.7.11 1.03C7.69 5.4 4.07 3.7 1.64 1.15c-.38.65-.6 1.4-.6 2.2 0 1.52.77 2.86 1.94 3.65A4.48 4.48 0 0 1 .96 6v.06c0 2.13 1.52 3.91 3.54 4.31-.37.1-.76.16-1.16.16-.28 0-.55-.03-.81-.08.56 1.74 2.17 3 4.09 3.04A9.05 9.05 0 0 1 0 19.54a12.8 12.8 0 0 0 6.95 2.04c8.34 0 12.9-6.91 12.9-12.9 0-.2 0-.39-.01-.58A9.22 9.22 0 0 0 24 4.59a9.1 9.1 0 0 1-2.6.71A4.48 4.48 0 0 0 23 3z" />
+            </svg></a>
+          <a href="https://Pinterest.com" class="hover:text-[#40DDB6]" aria-label="Pinterest"><svg xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M8.5 13.5c.5 1 1.5 2 3.5 2 2.5 0 4-1.5 4-4s-1.5-4-4-4-4 1.5-4 4c0 1.5.5 2.5 1.5 3" />
+            </svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Navbar -->
+<nav class="bg-white h-[90px] shadow-md flex items-center justify-between px-6 sticky top-0 left-0 w-full z-50 ">
+  <!-- الشعار -->
+      <div class="flex items-center ml-14" data-aos="fade-right">
+        <img src="../images/Icon (1).png" alt="Logo" class="h-8 w-auto mr-2" />
+        <span class="font-bold text-lg">WhiteCo</span>
+        <span class="font-bold text-lg text-blue-600">ll</span>
+        <span class="font-bold text-lg">ar</span>
+      </div>
+
+  <!-- روابط على الشاشات الكبيرة -->
+  <ul class="hidden md:flex items-center gap-3 font-medium text-[#37393F] mr-1 ">
+    <li><a href="index.html" class="hover:text-[#40DDB6]">Home</a></li>
+    <li><a href="aboutus.html" class="hover:text-[#40DDB6]">About</a></li>
+    <li class="relative group hidden md:block">
+      <button class="hover:text-[#40DDB6] flex items-center gap-1">
+        Pages <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+    </svg>
+      </button>
+       <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg mt-2 p-7 rounded-lg w-[180px] gap-3">
+        <li><a href="Changelog1.html" class="hover:text-[#40DDB6]">Changlog</a></li>
+        <li><a href="projects.html" class="hover:text-[#40DDB6]">Project</a></li>
+        <li><a href="team1.html" class="hover:text-[#40DDB6]">Team</a></li>
+        <li><a href="Fag1.html" class="hover:text-[#40DDB6]">FAQ</a></li>
+        <li><a href="pricePacks.html" class="hover:text-[#40DDB6]">Price Packs</a></li>
+        <li><a href="servicesSingle.html" class="hover:text-[#40DDB6]">Our Services</a></li>
+        <li><a href="projectsSingle.html" class="hover:text-[#40DDB6]">Projects Single</a></li>
+        <li><a href="blogSingle1.html" class="hover:text-[#40DDB6]">Blog Single</a></li>
+         <li><a href="Password1.html" class="hover:text-[#40DDB6]">Password</a></li>
+        <li><a href="error.html" class="hover:text-[#40DDB6]">Error</a></li>
+       <li><a href="License1.html" class="hover:text-[#40DDB6]">License</a></li>
+
+      </ul>
+    </li>
+    <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Services</a></li>
+    <li><a href="blog1.html" class="hover:text-[#40DDB6]">Blog</a></li>
+    <li><a href="contact1.html" class="hover:text-[#40DDB6]">Contact</a></li>
+
+    <li>
+      <!-- زر استدعاء المودال (الكبير) -->
+      <button onclick="openModal()" class="bg-blue-600 text-white px-5 py-2 w-[184px] h-[65px] hover:bg-blue-700 transition sm:w-auto">
+        Get Consulting
+      </button>
+    </li>
+  </ul>
+
+  <!-- زر الهامبرغر -->
+  <button id="menuToggle" class="md:hidden flex flex-col gap-1 z-50">
+   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg>
+  </button>
+</nav>
+
+<!--  قائمة الموبايل -->
+<div id="mobileMenu" class="hidden fixed top-[90px] right-4 w-[250px] bg-white shadow-lg rounded-lg md:hidden z-40">
+  <ul class="flex flex-col gap-4 p-6 font-medium text-[#37393F]">
+    <li><a href="index.html" class="hover:text-[#40DDB6]">Home</a></li>
+    <li><a href="aboutus.html" class="hover:text-[#40DDB6]">About</a></li>
+    <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Services</a></li>
+    <li><a href="blog1.html" class="hover:text-[#40DDB6]">Blog</a></li>
+    <li><a href="contact1.html" class="hover:text-[#40DDB6]">Contact</a></li>
+
+    <!-- Pages في الموبايل -->
+    <li class="relative">
+      <button id="pagesToggle" class="flex items-center justify-between w-full hover:text-[#40DDB6]">
+        Pages  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+    </svg>
+      </button>
+      <ul id="pagesMenu" class="group-hover:flex flex-col bg-white shadow-lg mt-2 p-7 rounded-lg w-[180px] gap-6">
+       <li><a href="Changelog1.html" class="hover:text-[#40DDB6]">Changlog</a></li>
+        <li><a href="projects.html" class="hover:text-[#40DDB6]">Project</a></li>
+        <li><a href="team1.html" class="hover:text-[#40DDB6]">Team</a></li>
+        <li><a href="Fag1.html" class="hover:text-[#40DDB6]">FAQ</a></li>
+         <li><a href="pricePacks.html" class="hover:text-[#40DDB6]">Price Packs</a></li>
+
+        <li><a href="servicesSingle.html" class="hover:text-[#40DDB6]">Our Services</a></li>
+        <li><a href="projectsSingle.html" class="hover:text-[#40DDB6]">Projects Single</a></li>
+        <li><a href="blogSingle1.html" class="hover:text-[#40DDB6]">Blog Single</a></li>
+               <li><a href="License1.html" class="hover:text-[#40DDB6]">License</a></li>
+         <li><a href="Password1.html" class="hover:text-[#40DDB6]">Password</a></li>
+        <li><a href="error.html" class="hover:text-[#40DDB6]">Error</a></li>
+      </ul>
+    </li>
+
+    <!-- زر الموبايل -->
+    <li>
+      <button onclick="openModal()" class="bg-blue-600 text-white w-full py-3 rounded-md hover:bg-blue-700 transition">
+        Get Consulting
+      </button>
+    </li>
+  </ul>
+</div>
+
+<!--  المودال (نسخة وحدة) -->
+<div onclick="closeModal()"  id="consultingModal" class="fixed inset-0 bg-[#37393FE8] bg-opacity-50 hidden flex items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-[400px] relative">
+    <!-- زر الإغلاق -->
+    <button 
+      class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl">
+      &times;
+    </button>
+
+    <h2 class="text-xl font-semibold mb-4">Request Consulting</h2>
+
+    <form class="space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#667EEA]">
+      <input type="email" placeholder="Your Email" class="w-full border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#667EEA]">
+      <textarea placeholder="Your Message" class="w-full border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#667EEA]"></textarea>
+      
+      <button type="submit" class="w-full bg-[#667EEA] hover:bg-[#5A67D8] text-white py-2 rounded-md">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Hero Section -->
+<section class="h-[400px] flex justify-start items-start m-0 p-0 mb-16" data-aos="fade-zoom-in"
+  style="background-image: url('../images/Photo (18).png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  
+  <div data-aos="fade-right" class="flex flex-col justify-center h-[400px] w-full max-w-2xl px-6 sm:px-12 py-10 bg-[#37393FE8]">
+    <!-- Welcome Row -->
+    <div class="flex items-center mb-3">
+      <img src="../images/Box (1).png" alt="box" class="w-4 h-4 mr-2" />
+      <span class="text-white text-sm sm:text-[18px] font-semibold">Recent News</span>
+    </div>
+    <!-- Title -->
+    <h1 class="text-white font-extrabold text-[32px] sm:text-[45px] lg:text-[60px] leading-tight">
+      We Keep You Updated
+    </h1>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section class="py-16 bg-white" data-aos="zoom-in-down">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- العنوان -->
+    <div class="text-center mb-12">
+      <p class="text-[#37393F] text-[18px] font-medium mb-2 flex items-center justify-center gap-2">
+        <img src="../images/Box (1).png" alt="box" class="w-4 h-4" />
+        Latest Projects
+      </p>
+      <h2 class="text-[40px] font-extrabold text-[#37393F]">
+        Discover our latest client projects
+      </h2>
+      <p class="text-[#7D7D7D] mt-4 max-w-2xl mx-auto text-[14px]">
+        Leverage agile frameworks to provide a robust synopsis for high level overviews.
+        Iterative approaches to corporate strategy foster collaborative thinking to further the overall.
+      </p>
+    </div>
+
+    <!-- البطاقات -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- بطاقة 1 -->
+      <div class="bg-white overflow-hidden">
+        <img src="../images/Image (1).png" alt="Project" class="w-full h-[501px] object-cover">
+        <div class="pt-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-[#37393F] text-[20px]">Financial Investment</h3>
+            <a href="projectsSingle.html" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#6B77E5] cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <div class="mt-2 flex items-center space-x-2 text-sm text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B77E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>
+            </svg>
+            <span class="text-[#7D7D7D] text-[14px]">Sep 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقة 2 -->
+      <div class="bg-white overflow-hidden">
+        <img src="../images/Image (4).png" alt="Project" class="w-full h-[501px] object-cover">
+        <div class="pt-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-[#37393F] text-[20px]">Marketing Strategy</h3>
+           <a href="projectsSingle.html" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#F2F2F2] cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <div class="mt-2 flex items-center space-x-2 text-sm text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B77E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>
+            </svg>
+            <span class="text-[#7D7D7D] text-[14px]">Oct 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقة 3 -->
+      <div class="bg-white overflow-hidden">
+        <img src="../images/Photo (4).png" alt="Project" class="w-full h-[501px] object-cover">
+        <div class="pt-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-[#37393F] text-[20px]">Business Consulting</h3>
+            <a href="projectsSingle.html" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#F2F2F2] cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <div class="mt-2 flex items-center space-x-2 text-sm text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B77E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>
+            </svg>
+            <span class="text-[#7D7D7D] text-[14px]">Nov 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقة 4 -->
+      <div class="bg-white overflow-hidden">
+        <img src="../images/Photo (5).png" alt="Project" class="w-full h-[501px] object-cover">
+        <div class="pt-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-[#37393F] text-[20px]">Financial Investment</h3>
+            <a href="projectsSingle.html" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#F2F2F2] cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <div class="mt-2 flex items-center space-x-2 text-sm text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B77E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>
+            </svg>
+            <span class="text-[#7D7D7D] text-[14px]">Dec 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقة 5 -->
+      <div class="bg-white overflow-hidden">
+        <img src="../images/Photo (13).png" alt="Project" class="w-full h-[501px] object-cover">
+        <div class="pt-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-[#37393F] text-[20px]">Web Development</h3>
+            <a href="projectsSingle.html" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#F2F2F2] cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <div class="mt-2 flex items-center space-x-2 text-sm text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B77E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>
+            </svg>
+            <span class="text-[#7D7D7D] text-[14px]">Jan 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقة 6 -->
+      <div class="bg-white overflow-hidden">
+        <img src="../images/Photo (14).png" alt="Project" class="w-full h-[501px] object-cover">
+        <div class="pt-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-[#37393F] text-[20px]">Financial Investment</h3>
+            <a href="projectsSingle.html" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#F2F2F2] cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <div class="mt-2 flex items-center space-x-2 text-sm text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B77E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>
+            </svg>
+            <span class="text-[#7D7D7D] text-[14px]">Feb 2023</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-[#37393F] text-white pt-12 pb-6" data-aos="zoom-in-down">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Row 1 -->
+    <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between border-b border-gray-700 pb-6 mb-6 gap-8 text-center lg:text-left">
+      
+      <!-- Logo -->
+      <div class="flex items-center justify-center lg:justify-start gap-0 pt-3">
+        <img src="../images/Icon (1).png" alt="icon" class="h-8 w-auto" />
+        <span class="font-bold text-xl">WhiteCo</span>
+        <span class="font-bold text-xl text-[#40DDB6]">ll</span>
+        <span class="font-bold text-xl">ar</span>
+      </div>
+
+      <!-- Call -->
+      <div class="flex items-center justify-center lg:justify-start gap-3">
+        <img src="../images/Icon (2).png" alt="call" class="h-12 w-12" />
+        <div>
+          <strong>Call Us</strong><br />
+          <a href="tel:+01569896654" class="text-gray-400 hover:text-[#40DDB6]">+01 569 896 654</a>
+        </div>
+      </div>
+
+      <!-- Mail -->
+      <div class="flex items-center justify-center lg:justify-start gap-3">
+        <img src="../images/Icon (3).png" alt="mail" class="h-12 w-12" />
+        <div>
+          <strong>Mail Us</strong><br />
+          <a href="mailto:info@example.com" class="text-gray-400 hover:text-[#40DDB6]">info@example.com</a>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="flex items-center justify-center lg:justify-start gap-3">
+        <img src="../images/Message.png" alt="loc" class="h-12 w-12" />
+        <div>
+          <strong>Location</strong><br />
+          <a href="https://maps.google.com/?q=Amsterdam,109-74" target="_blank" class="text-gray-400 hover:text-[#40DDB6]">
+            Amsterdam, 109-74
+          </a>
+        </div>
+      </div>
+    </div>
+
+<!-- Row 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left justify-items-center">
+
+ 
+   <!-- Quick Link -->
+    <div>
+        <h6 class="font-bold mb-3 flex items-center text-[#40DDB6] gap-2">
+            <img src="../images/Box.png" altIcon (1).png="icon" class="w-3 h-3 ml-2" />Quick Link
+          </h6>
+      <ul class="space-y-2 text-gray-300 text-[15px]">
+        <li><a href="index.html" class="hover:text-[#40DDB6]">Home</a></li>
+            <li><a href="aboutus.html" class="hover:text-[#40DDB6]">About Us</a></li>
+            <li><a href="blog1.html" class="hover:text-[#40DDB6]">Blog</a></li>
+            <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Services</a></li>
+            <li><a href="contact1.html" class="hover:text-[#40DDB6]">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Our Services -->
+    <div>
+      <h6 class="font-bold mb-3 flex items-center text-[#40DDB6] gap-2">
+            <img src="../images/Box.png" altIcon (1).png="icon" class="w-3 h-3 ml-2" />Our Services
+          </h6>
+      <ul class="space-y-2 text-gray-300 text-[15px]">
+       <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Financial Consulting</a></li>
+            </li>
+            <li>
+  <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Business Management</a></li>
+            </li>
+            <li>
+  <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Consultant & Programs</a></li>
+            </li>
+            <li>
+  <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Company Management</a></li>
+            </li>
+            <li>
+  <li><a href="ourServices.html" class="hover:text-[#40DDB6]">Insurance & Finance</a></li>
+      </ul>
+    </div>
+
+    <!-- Utility Page -->
+    <div>
+      <h6 class="font-bold mb-3 flex items-center text-[#40DDB6] gap-2">
+            <img src="../images/Box.png" altIcon (1).png="icon" class="w-3 h-3 ml-2" />Utility Page
+          </h6>
+      <ul class="space-y-2 text-gray-300 text-[15px]">
+        <li><a href="#" class="hover:text-[#40DDB6]">Style Guide</a></li>
+  <li><a href="License1.html" class="hover:text-[#40DDB6]">Licenses</a></li>
+  <li><a href="Password1.html" class="hover:text-[#40DDB6]">Instructions</a></li>
+            <li><a href="Changelog1.html" class="hover:text-[#40DDB6]">Changelog</a></li>
+  <li><a href="error.html" class="hover:text-[#40DDB6]">404 Page</a></li>
+      </ul>
+    </div>
+
+    <!-- Subscribe -->
+    <div >
+      <div class="bg-[#3A3B40] p-6 rounded-lg text-center lg:text-left">
+        <h4 class="font-bold text-[18px] mb-2">Subscribe</h4>
+        <p class="mb-4 text-[14px] text-gray-300">Join Our Mailing List & get our news.</p>
+
+      <!-- Form -->
+<form class="flex flex-col sm:flex-row w-full max-w-md gap-2 sm:gap-0">
+  <input type="email" 
+         placeholder="your email address"
+         class="w-full p-3 rounded-md sm:rounded-l-md sm:rounded-r-none bg-white text-black focus:outline-none" />
+  <button type="submit"
+          class="bg-[#6B77E5] text-white px-5 py-3 rounded-md sm:rounded-l-none sm:rounded-r-md hover:bg-[#5a65d4] transition w-full sm:w-auto">
+    Subscribe
+  </button>
+</form>
+
+
+      </div>
+    </div>
+
+</div>
+
+
+
+    <!-- Row 3 -->
+    <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-4 text-sm gap-3 text-center md:text-left">
+      <div>
+        Copyright © <span class="text-[#40DDB6]">WhiteCollar</span> | Designed by
+        <span class="text-[#6B77E5]">VictorFlow</span> Templates - Powered by Webflow
+      </div>
+      <div class="flex items-center justify-center md:justify-start gap-3">
+        <span>Follow:</span>
+          <a href="https://www.facebook.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="https://twitter.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter">
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+            </svg></a>
+          <a href="https://www.instagram.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg></a>
+          <a href="https://www.youtube.com/" class="hover:text-[#40DDB6]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube">
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+              <path d="m10 15 5-3-5-3z" />
+            </svg></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!--  سكربت -->
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const pagesToggle = document.getElementById("pagesToggle");
+  const pagesMenu = document.getElementById("pagesMenu");
+  const lines = menuToggle.querySelectorAll(".line");
+
+  // فتح/إغلاق منيو الموبايل
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    // شكل زر الهامبرغر يتحول X
+    lines[0].classList.toggle("rotate-45");
+    lines[0].classList.toggle("translate-y-2");
+    lines[1].classList.toggle("opacity-0");
+    lines[2].classList.toggle("-rotate-45");
+    lines[2].classList.toggle("-translate-y-2");
+  });
+
+  // فتح/إغلاق Pages في الموبايل
+  pagesToggle.addEventListener("click", () => {
+    pagesMenu.classList.toggle("hidden");
+  });
+
+  // فتح وإغلاق المودال
+  function openModal() {
+    document.getElementById('consultingModal').classList.remove('hidden');
+  }
+  function closeModal() {
+    document.getElementById('consultingModal').classList.add('hidden');
+  }
+</script>
+
+
+
+<!--  AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+    once: false,
+    mirror: true
+    })
+  </script>
+<script>
+  $(document).ready(function() {
+    $('#menuToggle').click(function() {
+      if ($('.menu').hasClass('hidden')) {
+        $('.menu').fadeIn(200).removeClass('hidden');
+      } else {
+        $('.menu').fadeOut(200).addClass('hidden');        
+      }
+    });
+  });
+</script>
+ </body>
+
+</html>
